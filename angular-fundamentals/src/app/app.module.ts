@@ -1,9 +1,13 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
 import { CommonModule } from '@angular/common';
+
+import { PassengerDashboardModule } from './passenger-dashboard/passenger-dashboard.module';
+
+import { AppComponent } from './app.component';
+
+import { FormsModule } from '@angular/forms';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -12,9 +16,13 @@ import { CommonModule } from '@angular/common';
     // SettingsComponent
   ],
   imports: [
+    // angular modules
     BrowserModule,
     AppRoutingModule,
-    CommonModule
+    CommonModule,
+    FormsModule,
+    // custom modules
+    PassengerDashboardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
